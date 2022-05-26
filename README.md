@@ -324,4 +324,4 @@ Walk through and explain what you did to prepare the data and answer each viz/te
     - [ ] Speech should be natural, and take the time needed for the audience to consume the information
     - [ ] Time not spent scrolling through 10's of visualizations or hundreds of lines of code
     
-- Use needs to have their own env.py file with 'password', 'host', and 'user' for username to access Codeup database.
+- User needs to have their own env.py file with 'password', 'host', and 'user' for username to access Codeup database in addition to download the acquire.py, prepare.py, and util.py files
