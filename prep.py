@@ -10,14 +10,14 @@ def prep_telco(df):
 # splits the full data set 80/20 into train and test dataframes stratified 
 # around churn, the target variable, using the train_test_split function
     train, test = train_test_split(df, 
-                               train_size = 0.8, 
+                               train_size = 0.6, 
                                stratify = df.churn, 
                                random_state=5678)
 
 # splits the train dataframe 70/30 into the new train and validate dataframes
 # they're stratified around churn again using the train_test_split function
     train, validate = train_test_split(train,
-                                    train_size = 0.7,
+                                    train_size = 0.6,
                                     stratify = train.churn,
                                     random_state=5678)
     
@@ -36,7 +36,7 @@ def clean_telco_cat(df):
     
 # creates a variable to hold all the columns to be dropped in a subsequent step
     cols_to_drop = ['payment_type_id', 'internet_service_type_id', 
-                    'contract_type_id',  'customer_id', 'tenure', 
+                    'contract_type_id', 'customer_id', 'tenure', 
                     'monthly_charges', 'total_charges']
     
 # uses drop fx to remove columns id'd in previous step from df
