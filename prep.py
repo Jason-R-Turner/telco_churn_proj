@@ -7,14 +7,14 @@ def prep_telco(df):
     Prepares acquired telco dataframe for exploration
     '''
     
-# splits the full data set 80/20 into train and test dataframes stratified 
+# splits the full data set 60/40 into train and test dataframes stratified 
 # around churn, the target variable, using the train_test_split function
     train, test = train_test_split(df, 
                                train_size = 0.6, 
                                stratify = df.churn, 
                                random_state=5678)
 
-# splits the train dataframe 70/30 into the new train and validate dataframes
+# splits the train dataframe 60/40 into the new train and validate dataframes
 # they're stratified around churn again using the train_test_split function
     train, validate = train_test_split(train,
                                     train_size = 0.6,
